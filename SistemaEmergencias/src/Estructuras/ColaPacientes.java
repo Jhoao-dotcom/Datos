@@ -11,7 +11,6 @@ public class ColaPacientes {
 
         frente = null;
         fin = null;
-
     }
     
     public void encolar(Paciente paciente) {
@@ -24,7 +23,6 @@ public class ColaPacientes {
             fin = nuevo;
         }
     }
-    
     public Paciente desencolar() {
         if (frente == null) {
             return null;
@@ -45,23 +43,14 @@ public class ColaPacientes {
         }
         return frente.paciente;
     }
-    
-    
     public void mostrarCola() {
-
         if (frente == null) {
-
             System.out.println("No hay pacientes en espera.");
             return;
-
         }
-
         NodoCola aux = frente;
-
         System.out.println("\n===== COLA DE ATENCIÓN =====");
-
         while (aux != null) {
-
             System.out.println("Nombre: " + aux.paciente.getNombres());
             System.out.println("DNI: " + aux.paciente.getDni());
             System.out.println("Gravedad: " + aux.paciente.getGravedad());
